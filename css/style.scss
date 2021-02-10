@@ -2,7 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
 }
+
+@import 'partials/colors';
 
 body{
     width: 100%;
@@ -10,3 +13,29 @@ body{
     background-color: #1a1a1a;
     border: 2px solid violet;
 }
+
+img, svg{
+    display: block;
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: $white;
+}
+
+.border{
+    border: 1px solid red;
+}
+
+p{
+    font-size: 16px;
+    color: $gray-3;
+    letter-spacing: 1px;
+    line-height: 140%;
+}
+
+@import 'partials/layout';
+@import 'partials/menu';
+@import 'partials/animations';
+
