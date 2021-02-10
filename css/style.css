@@ -3,6 +3,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Mukta', sans-serif;
 }
 
 body {
@@ -10,5 +11,26 @@ body {
   height: 100vh;
   background-color: #1a1a1a;
   border: 2px solid violet;
+}
+
+img, svg {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #EDF1F7;
+}
+
+.border {
+  border: 1px solid red;
+}
+
+p {
+  font-size: 16px;
+  color: #959698;
+  letter-spacing: 1px;
+  line-height: 140%;
 }
 /*# sourceMappingURL=style.css.map */
