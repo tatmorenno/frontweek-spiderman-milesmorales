@@ -2,6 +2,7 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 36px 16px;
+    height: 100vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -9,12 +10,24 @@
 }
 
 .container-item-1{
-    max-width: 576px;
+    max-width: 586px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
 }
 
+.flex{
+    display: flex;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.align-items-center{
+    align-items: center;
+}
 
 .spiderman{
     width: 150%;
