@@ -38,12 +38,16 @@
 }
 
 .spiderman{
-    width: 150%;
-    transform: translate3d(-170px,0,0);
-    @include responsive(){
+    width: 130%;
+    transition: 0.7s ease;
+    transform: translate3d(-150px,-50,0);
+    @include responsive(xl){
+        transform: translate3d(-190px,-20,0);
+        width: 140%;
+    }
+    @include responsive(s){
+        transform: translate3d(0,-20px,0);
         width: 100%;
-        transform: translate3d(0,0,0);
-
     }
 }
 
@@ -151,4 +155,19 @@
         display: block;
         background: linear-gradient(101.47deg, #0a0c10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0a0c10 73.17%);
     }
+}
+
+.bg-loader{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(225deg, $red 0%, $red-dark 100%);
+    overflow: hidden;
+
 }
