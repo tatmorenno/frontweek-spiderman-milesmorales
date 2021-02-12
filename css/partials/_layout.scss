@@ -1,3 +1,4 @@
+
 .container{
     max-width: 1440px;
     margin: 0 auto;
@@ -7,6 +8,13 @@
     flex-direction: row;
     align-items: center;
     overflow: hidden;
+    height: 85vh;
+    overflow: none;
+    @include responsive(){
+        flex-direction: column;
+        height: auto;
+        overflow: hidden;
+    }
 }
 
 .container-item-1{
@@ -32,6 +40,11 @@
 .spiderman{
     width: 150%;
     transform: translate3d(-170px,0,0);
+    @include responsive(){
+        width: 100%;
+        transform: translate3d(0,0,0);
+
+    }
 }
 
 .btn{
@@ -113,5 +126,29 @@
         &::after{
           width: 102%;
         }
+    }
+}
+
+.bg-video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        background: linear-gradient(101.47deg, #0a0c10 26.38%, rgba(10, 12, 16, 0.8) 50.07%, #0a0c10 73.17%);
     }
 }

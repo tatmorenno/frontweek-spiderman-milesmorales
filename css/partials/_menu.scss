@@ -24,7 +24,10 @@ header{
 .nav-list{
     list-style: none;
     display: flex;
-
+    
+        @include responsive(){
+            display: none;
+        }
     li {
         margin-left: 24px;
     }
@@ -44,7 +47,7 @@ header{
     font-weight: 200;
     color: $gray-3;
     position: relative;
-    transition: all 0.7s ease;
+    transition: all .7s ease;
 
     &::after{
         content: '';
@@ -57,8 +60,8 @@ header{
         height: 0px;
         border-radius: 2px;
         transform: translate3d(-15%,0,0);
-        transition: 0.7s ease;
-        background: linear-gradient(359.94deg, #E11C21 0.06% rgba(225, 28, 33, 0) 101.91%);        
+        transition: .7s ease;
+        background: linear-gradient(359.94deg, #E11C21 0.06%, rgba(225, 28, 33, 0) 101.91%);        
     }
    
     &:hover{
@@ -68,6 +71,57 @@ header{
         }
     }
 }
+
+.bx{
+    display: none;
+    @include responsive(){
+        display: block;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+    }
+    position: relative;
+}
+
+.bx::after{
+    content: '';
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    width: 70%;
+    height: 10%;
+    background-color: $white-light;
+    border-radius: 20px;
+    transition: 1s ease;
+    
+}
+
+.bx::before{
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 45%;
+    width: 40%;
+    height: 10%;
+    background-color: $white-light;
+    border-radius: 20px;
+    transition: 1s ease;
+    
+    }
+
+#bx:checked ~ label .bx::after{
+    transform: rotate(225deg);
+    top: 45%;
+    left: 15%;
+}
+#bx:checked ~ label .bx::before{
+    transform: rotate(-405deg);
+    top: 45%;
+    left: 15%;
+    width: 70%;
+    height: 10%;
+}
+
 
 .nav-social{
     display: flex;
@@ -86,5 +140,8 @@ header{
                 transform: translate3d(0,-3px,0);
             }
         }
+    }
+    @include responsive(){
+        display: none;
     }
 }
